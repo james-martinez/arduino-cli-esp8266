@@ -3,7 +3,7 @@ on: push
 jobs:
   build:
     runs-on: [ubuntu-latest]
-    container: ghcr.io/james-martinez/arduino-cli-esp8266:79cd3f43u
+    container: ghcr.io/james-martinez/arduino-cli-esp8266:764f7fa2
     steps:
       - uses: actions/checkout@v1
         with:
