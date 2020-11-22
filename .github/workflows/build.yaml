@@ -1,0 +1,13 @@
+name: Build firmware
+on: push
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    container: ghcr.io/james-martinez/arduino-cli-esp8266:79cd3f43u
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          branch: master
+      - name : Build 
+        run: |
+          arduino-cli compile -b esp8266:esp8266:generic sometest/smoke-test.ino
