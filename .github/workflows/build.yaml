@@ -10,4 +10,5 @@ jobs:
           branch: master
       - name : Build 
         run: |
+          arduino-cli core install esp8266:esp8266 
           arduino-cli compile -b esp8266:esp8266:generic test/test.ino
