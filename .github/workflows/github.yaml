@@ -12,5 +12,6 @@ jobs:
         username: ${{secrets.DOCKER_USERNAME}}
         password: ${{secrets.DOCKER_TOKEN}}
     - run: | 
-        docker build -t ghcr.io/$GITHUB_REPOSITORY/arduino-cli-esp8266:$GITHUB_SHA .
-        docker push ghcr.io/$GITHUB_REPOSITORY/arduino-cli-esp8266:$GITHUB_SHA
+        SHORT_SHA=$(echo $GITHUB_SHA | cut -c 1-8)
+        docker build -t ghcr.io/$GITHUB_REPOSITORY:$SHORT_SHA .
+        docker push ghcr.io/$GITHUB_REPOSITORY:$SHORT_SHA
