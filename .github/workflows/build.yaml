@@ -7,9 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
-          branch: master
+          branch: main
       - name : Build 
         run: |
-          pwd
-          ls -lah .
+          cat test/test.ino
           arduino-cli compile -b esp8266:esp8266:generic test/test.ino
