@@ -5,10 +5,10 @@ jobs:
     runs-on: [ubuntu-latest]
     container: ghcr.io/james-martinez/arduino-cli-esp8266:79cd3f43
     steps:
-      - name: Checkout main brach
+      - name: Checkout main branch
         uses: actions/checkout@v1
         with:
-          branch: main
+          ref: main
       - name : Build from source
         run: arduino-cli --config-file /root/.arduino15/arduino-cli.yaml compile -b esp8266:esp8266:generic test/test.ino
       - name: Store binary artifact
