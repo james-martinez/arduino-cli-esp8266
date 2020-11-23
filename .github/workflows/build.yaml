@@ -10,5 +10,4 @@ jobs:
           branch: main
       - name : Build 
         run: |
-          cat test/test.ino
-          arduino-cli compile -b esp8266:esp8266:generic test/test.ino
+          arduino-cli --config-file /root/.arduino15/arduino-cli.yaml compile -b esp8266:esp8266:generic test/test.ino
