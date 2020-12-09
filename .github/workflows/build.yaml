@@ -1,11 +1,11 @@
 name: Build firmware
 on:
   package:
-    action: updated
+    action: [updated]
 jobs:
   build:
     runs-on: [ubuntu-latest]
-    container: ghcr.io/james-martinez/arduino-cli-esp8266:79cd3f43
+    container: ghcr.io/james-martinez/arduino-cli-esp8266:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v1
