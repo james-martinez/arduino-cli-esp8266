@@ -1,6 +1,6 @@
 name: Build firmware
 on:
-  package:
+  registry_package:
     types: [updated]
 jobs:
   build:
