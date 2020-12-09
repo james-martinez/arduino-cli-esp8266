@@ -6,5 +6,5 @@ arduino-cli config init && \
 sed -i 's/additional_urls: \[\]/additional_urls: \[https:\/\/arduino.esp8266.com\/stable\/package_esp8266com_index.json\]/g' /root/.arduino15/arduino-cli.yaml &&  \
 sed -i  's/enabled: true/enabled: false/g' /root/.arduino15/arduino-cli.yaml &&  \
 arduino-cli core update-index &&  \
-arduino-cli core install esp8266:esp8266 &&  \
+arduino-cli core install esp8266:esp8266
 EXPOSE 50051
