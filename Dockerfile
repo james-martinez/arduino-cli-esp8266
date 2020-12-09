@@ -1,3 +1,4 @@
+LABEL org.opencontainers.image.source https://github.com/james-martinez/arduino-cli-esp8266
 FROM ubuntu:bionic
 RUN apt-get update &&  \
 apt-get install curl python3 -y &&  \
