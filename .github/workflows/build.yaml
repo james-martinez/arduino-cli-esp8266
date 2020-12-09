@@ -1,7 +1,7 @@
 name: Build firmware
 on:
-  registry_package:
-    types: [updated]
+  package:
+    action: updated
 jobs:
   build:
     runs-on: [ubuntu-latest]
