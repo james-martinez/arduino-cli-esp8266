@@ -1,5 +1,7 @@
 name: Build firmware
-on: push
+on:
+  registry_package:
+    types: [updated]
 jobs:
   build:
     runs-on: [ubuntu-latest]
