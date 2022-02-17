@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 RUN apt-get update &&  \
 apt-get install curl python3 -y &&  \
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh &&  \
