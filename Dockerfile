@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 RUN apt-get update &&  \
-apt-get install curl -y &&  \
+apt-get install curl python3 -y &&  \
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh &&  \
 arduino-cli config init && \
 sed -i 's/additional_urls: \[\]/additional_urls: \[https:\/\/arduino.esp8266.com\/stable\/package_esp8266com_index.json\]/g' /root/.arduino15/arduino-cli.yaml &&  \
