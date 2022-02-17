@@ -13,5 +13,5 @@ jobs:
         password: ${{secrets.DOCKER_TOKEN}}
     - run: | 
         SHORT_SHA=$(echo $GITHUB_SHA | cut -c 1-8)
-        docker build -t ghcr.io/$GITHUB_REPOSITORY:$SHORT_SHA .
+        docker build -t ghcr.io/$GITHUB_REPOSITORY:$SHORT_SHA ghcr.io/$GITHUB_REPOSITORY:latest .
         docker push ghcr.io/$GITHUB_REPOSITORY:$SHORT_SHA
