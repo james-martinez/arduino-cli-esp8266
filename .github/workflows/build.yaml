@@ -3,7 +3,7 @@ on: push
 jobs:
   build:
     runs-on: [ubuntu-latest]
-    container: ghcr.io/james-martinez/arduino-cli-esp8266:$(echo $GITHUB_SHA | cut -c 1-8)
+    container: ghcr.io/james-martinez/arduino-cli-esp8266:latest
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v1
