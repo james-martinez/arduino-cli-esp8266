@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 RUN apt-get update &&  \
 apt-get install curl python3 -y &&  \
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh &&  \
